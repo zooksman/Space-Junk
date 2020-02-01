@@ -11,19 +11,20 @@ public class PlayerScript : MonoBehaviour
 
     bool active;
     float cooldown;
-    const float BASE_COOLDOWN = 0.5f;
+    public const float BASE_COOLDOWN = 0.5f;
     bool rightClicking; // continually remains true until click is released
 
     float glueBuildup;
-    const float GLUE_RATE_INCREASE = 0.01f;
-    const float MINIMUM_GLUE_BUILDUP = 0.2f;
-    const float MAXIMUM_GLUE_BUILDUP = 1f;
+    public const float GLUE_RATE_INCREASE = 0.01f;
+    public const float MINIMUM_GLUE_BUILDUP = 0.2f;
+    public const float MAXIMUM_GLUE_BUILDUP = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
         active = true;
         glueS = glue.GetComponent<GlueScript>();
+        glueBuildup = MINIMUM_GLUE_BUILDUP;
     }
 
     // Update is called once per frame
@@ -57,8 +58,10 @@ public class PlayerScript : MonoBehaviour
 
     private void BuildupGlue()
     {
-        glueBuildup += GLUE_RATE_INCREASE;
-        glueS.SetSize();
+    	if (glueBuildup < MAXIMUM_GLUE_BUILDUP) {
+			glueBuildup += GLUE_RATE_INCREASE;
+        }
+        glueS.SetSize(glueBuildup);
     }
 
 }
