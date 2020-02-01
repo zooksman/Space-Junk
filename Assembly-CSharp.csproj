@@ -66,6 +66,7 @@
     <Compile Include="Assets\AsteroidScript.cs" />
     <Compile Include="Assets\GlueScript.cs" />
     <Compile Include="Assets\PlayerScript.cs" />
+    <Compile Include="Assets\ShipPieceScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/dnalr/OneDrive/Documents/GameJam1/Space-Junk/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
