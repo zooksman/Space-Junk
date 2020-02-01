@@ -33,6 +33,7 @@ public class PlayerScript : MonoBehaviour
         if (rightClicking == true)
         {
             BuildupGlue();
+         	glueS.SetSize(glueBuildup);
         }
         if (Input.GetMouseButtonDown(0))
         {
@@ -61,7 +62,6 @@ public class PlayerScript : MonoBehaviour
     	if (glueBuildup < MAXIMUM_GLUE_BUILDUP) {
 			glueBuildup += GLUE_RATE_INCREASE;
         }
-        glueS.SetSize(glueBuildup);
     }
 
 }
