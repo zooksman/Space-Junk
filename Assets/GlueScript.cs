@@ -18,8 +18,9 @@ public class GlueScript : MonoBehaviour
 
     }
 
-    public void SetSize()
+    public void SetSize(float s)
     {
+        size = s;
         transform.localScale = new Vector3(size, size, size);
     }
 
