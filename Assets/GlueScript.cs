@@ -27,8 +27,9 @@ public class GlueScript : MonoBehaviour
         transform.localScale = new Vector3(size, size, size);
     }
 
-    public void ShootSelf(Vector3 direction)
+    public void ShootSelf(Vector3 direction, Vector3 pos)
     {
+        transform.position = pos;
         rb.velocity = direction * VELOCITY_MODIFIER;
     }
 

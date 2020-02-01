@@ -54,4 +54,13 @@ public class AsteroidScript : MonoBehaviour
         rb.angularVelocity = new Vector3(Random.value * ANGULAR_VELOCITY_MODIFIER, Random.value * ANGULAR_VELOCITY_MODIFIER, Random.value * ANGULAR_VELOCITY_MODIFIER);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("boundry"))
+        {
+            StartingPosition();
+            StartingVelocity();
+        }  
+    }
+
 }
