@@ -48,7 +48,7 @@ public class PlayerScript : MonoBehaviour
 
     private void ShootGlue()
     {
-        //NEED METHOD CALL ON GLUE OBJECT SCRIPT SHOOTING GLUE
+        //NEED METHOD CALL ON GLUE OBJECT SCRIPT SHOOTING GLUE, PASSING IN DIRECTION VECTOR
         PropelBackward();
     }
 
